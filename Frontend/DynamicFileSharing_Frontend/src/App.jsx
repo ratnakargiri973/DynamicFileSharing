@@ -14,7 +14,7 @@ function App() {
 
   async function fetchFiles(){
     try {
-      const response = await axios.get("http://localhost:8080/api");
+      const response = await axios.get("https://dynamicfilesharing.onrender.com/api");
       // console.log(response.data);
       setSavedFiles(response.data);
     } catch (error) {
@@ -28,7 +28,7 @@ function App() {
       const data = new FormData();
       data.append("file", file);
 
-      const response = await axios.post("http://localhost:8080/api/uploadFiles", data);
+      const response = await axios.post("https://dynamicfilesharing.onrender.com/api/uploadFiles", data);
       console.log(response.data);
     } catch (error) {
       console.log(error);
