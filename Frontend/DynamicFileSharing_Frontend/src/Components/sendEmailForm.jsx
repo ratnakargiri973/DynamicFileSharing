@@ -8,7 +8,7 @@ function SendEmailForm() {
     async function handleEmailSubmit(e){
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:8080/api/files/send", {email, uuid});
+            const response = await axios.post("https://dynamicfilesharing.onrender.com/api/files/send", {email, uuid});
             console.log(response);
         } catch (error) {
           console.log(error)   
